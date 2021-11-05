@@ -1,0 +1,420 @@
+fileFormatVersion: 2
+guid: 45a9fdab7d268914ca4024abc8b799f6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 602039681428654152
+    second: Towers 2 _0
+  - first:
+      213: -365311261775588478
+    second: Towers 2 _1
+  - first:
+      213: -526236934075318491
+    second: Towers 2 _2
+  - first:
+      213: 7501779641204791183
+    second: Towers 2 _3
+  - first:
+      213: -2058006673940923309
+    second: Towers 2 _4
+  - first:
+      213: 8763008860429315959
+    second: Towers 2 _5
+  - first:
+      213: -7773778254077521102
+    second: Towers 2 _6
+  - first:
+      213: -4965864128972621503
+    second: Towers 2 _7
+  - first:
+      213: -4343733547736645941
+    second: Towers 2 _8
+  - first:
+      213: -7380411795973779297
+    second: Towers 2 _9
+  - first:
+      213: 5077668835621077080
+    second: Towers 2 _10
+  - first:
+      213: 5413778341517898301
+    second: Towers 2 _11
+  - first:
+      213: 1939359864696759015
+    second: Towers 2 _12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Towers 2 _0
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 2867
+        width: 957
+        height: 1420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8488e3886efda5800800000000000000
+      internalID: 602039681428654152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _1
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2873
+        width: 888
+        height: 1390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2839a69c7572eeaf0800000000000000
+      internalID: -365311261775588478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _2
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 2873
+        width: 881
+        height: 1402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52fffbceb4e62b8f0800000000000000
+      internalID: -526236934075318491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _3
+      rect:
+        serializedVersion: 2
+        x: 3636
+        y: 2971
+        width: 913
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87d44966dcab1860800000000000000
+      internalID: 7501779641204791183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _4
+      rect:
+        serializedVersion: 2
+        x: 4615
+        y: 2971
+        width: 805
+        height: 1332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c3e5675dd7073e0800000000000000
+      internalID: -2058006673940923309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _5
+      rect:
+        serializedVersion: 2
+        x: 5588
+        y: 3024
+        width: 770
+        height: 1251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f6d7151267c9970800000000000000
+      internalID: 8763008860429315959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1196
+        width: 988
+        height: 1497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2339d0b7dddfd1490800000000000000
+      internalID: -7773778254077521102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _7
+      rect:
+        serializedVersion: 2
+        x: 3636
+        y: 1568
+        width: 913
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1497bbd82e4b51bb0800000000000000
+      internalID: -4965864128972621503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _8
+      rect:
+        serializedVersion: 2
+        x: 4615
+        y: 1556
+        width: 805
+        height: 1332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bceb5383a55f7b3c0800000000000000
+      internalID: -4343733547736645941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _9
+      rect:
+        serializedVersion: 2
+        x: 5569
+        y: 1556
+        width: 808
+        height: 1332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9051ec1392839990800000000000000
+      internalID: -7380411795973779297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _10
+      rect:
+        serializedVersion: 2
+        x: 3636
+        y: 119
+        width: 913
+        height: 1386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850044247e0877640800000000000000
+      internalID: 5077668835621077080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _11
+      rect:
+        serializedVersion: 2
+        x: 4615
+        y: 119
+        width: 805
+        height: 1332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32b0ead7ba912b40800000000000000
+      internalID: 5413778341517898301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Towers 2 _12
+      rect:
+        serializedVersion: 2
+        x: 5569
+        y: 119
+        width: 808
+        height: 1332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e266e2958df9ea10800000000000000
+      internalID: 1939359864696759015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 117c152b151e4f74095ea023c90a6b08
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
