@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DressColor_7
+  m_Name: DressColor_5
   m_Shader: {fileID: 4800000, guid: ccfc7d68845db8341944b3091b59be55, type: 3}
   m_ShaderKeywords: TCP2_DISABLE_WRAPPED_LIGHT
   m_LightmapFlags: 0
@@ -120,10 +120,10 @@ Material:
     m_Colors:
     - _AmbientColor: {r: 1, g: 1, b: 1, a: 1}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0, g: 0.8002653, b: 0.8396226, a: 1}
+    - _Color: {r: 0.39435986, g: 0.2891153, b: 0.8396226, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HColor: {r: 0.77254903, g: 0.77254903, b: 0.77254903, a: 1}
+    - _HColor: {r: 0.77254903, g: 0.77254903, b: 0.77254903, a: 0.77254903}
     - _OutlineColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _RimColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
     - _SColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}

@@ -235,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -524,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -664,7 +664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -804,7 +804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -944,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -1014,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -1084,7 +1084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -1154,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -1224,7 +1224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
@@ -1364,7 +1364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998473823262299209, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: healPoint
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5544475241018735651, guid: 9c89b2acb1f95c743822bfe7ed02832d, type: 3}
       propertyPath: m_Name
