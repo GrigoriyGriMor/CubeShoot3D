@@ -176,6 +176,9 @@ public class NumericalAggregator : MonoBehaviour
 
 
     private bool endPos = false;
+
+    //[Header("ћаксимальна€ скорость вращени€ колеса")]
+    //[SerializeField] private int maxRpmSpeed = 100;
     private void FixedUpdate()
     {
         if (barabanUse)
@@ -183,7 +186,20 @@ public class NumericalAggregator : MonoBehaviour
             for (int i = 0; i < wheels.Length; i++)
             {
                 wheels[i].wheelDisk.brakeTorque = 0;
-                wheels[i].wheelDisk.motorTorque = wheels[i].factRotateSpeed;
+                if (wheels[i].factRotateSpeed >= 0)
+                {
+                    if (wheels[i].wheelDisk.rpm < wheels[i].factRotateSpeed)
+                        wheels[i].wheelDisk.motorTorque = 1500 * Mathf.Clamp(wheels[i].factRotateSpeed, -1, 1);
+                    else
+                        wheels[i].wheelDisk.motorTorque = 0;
+                }
+                else
+                {
+                    if (wheels[i].wheelDisk.rpm > wheels[i].factRotateSpeed)
+                        wheels[i].wheelDisk.motorTorque = 1500 * Mathf.Clamp(wheels[i].factRotateSpeed, -1, 1);
+                    else
+                        wheels[i].wheelDisk.motorTorque = 0;
+                }
             }
         }
         else
