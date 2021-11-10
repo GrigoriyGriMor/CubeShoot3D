@@ -16,6 +16,8 @@ public class CastelController : MonoBehaviour
 
     [HideInInspector] public UnityEvent gameEnd;
 
+    [SerializeField] private ParticleSystem startParticle;
+
     public void Init(bool warCastel)
     {
         // привязываем gameEnd к GameEnded и передаем заданный параметр
@@ -30,6 +32,14 @@ public class CastelController : MonoBehaviour
                 blocks.Add(transform.GetChild(i).GetComponent<BlockController>());
 
         PointsControlls();
+
+        StartCoroutine(StartParticle());
+    }
+
+    private IEnumerator StartParticle()
+    {
+        yield return new WaitForSeconds(0.01f);
+        startParticle.Play();
     }
 
     public void PointsControlls()

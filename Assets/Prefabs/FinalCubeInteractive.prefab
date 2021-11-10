@@ -28937,6 +28937,7 @@ GameObject:
   - component: {fileID: 7972432240876835699}
   - component: {fileID: 2998473823262299209}
   - component: {fileID: 756898841346085558}
+  - component: {fileID: 6937677387145898832}
   m_Layer: 0
   m_Name: FinalCubeInteractive
   m_TagString: Untagged
@@ -29013,6 +29014,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.25, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0.015}
+--- !u!95 &6937677387145898832
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544475241018735651}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8773d18ef3d582c4b8a5c8ca33821de2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7894595495987263013
 GameObject:
   m_ObjectHideFlags: 0
