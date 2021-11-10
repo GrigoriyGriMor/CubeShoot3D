@@ -3475,7 +3475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesObj:
-  - {fileID: 4824470974729928895, guid: f079e3eb02afff148b7c11a107a969e8, type: 3}
+  - {fileID: 4824470974729928895, guid: d393a3e61fef8dd4c8e7a4fb30b3b164, type: 3}
   castelsObj:
   - {fileID: 1012079888757675068, guid: 378bfa0f40aa671449f14d7cbc49e4e7, type: 3}
 --- !u!4 &741510379
