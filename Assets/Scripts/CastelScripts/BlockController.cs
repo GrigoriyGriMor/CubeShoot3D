@@ -17,15 +17,44 @@ public class BlockController : MonoBehaviour
 
     [Header("drop interface")]
     [SerializeField] private Rigidbody _rb;
+    private BoxCollider collider;
     [SerializeField] private ParticleSystem dropParticle;
     [SerializeField] private GameObject dropObj;
+
+    private Vector3 startPos;
 
     private void Start()
     {
         if (_rb == null) _rb.GetComponent<Rigidbody>();
+        collider = GetComponent<BoxCollider>();
         castel = transform.parent.GetComponent<CastelController>();
         if (MaterialAsset.Instance) material.material = MaterialAsset.Instance.SelectColor(healPoint);
         text.text = healPoint.ToString();
+
+        StartCoroutine(StartMove());
+    }
+
+    private IEnumerator StartMove()
+    {
+        canUse = false;
+        startPos = transform.position;
+        collider.isTrigger = true;
+        _rb.isKinematic = true;
+
+        
+
+        transform.position = new Vector3(transform.position.x + Random.Range(-20, 20), transform.position.y + Random.Range(2, 15), transform.position.z + Random.Range(-20, 20));
+        Transform pos = transform;
+        while (Vector3.Distance(transform.position, startPos) > 0.01f)
+        {
+            transform.position = Vector3.Lerp(pos.position, startPos, 0.05f);
+            yield return new WaitForFixedUpdate();
+        }
+
+        collider.isTrigger = false;
+        _rb.isKinematic = false;
+
+        canUse = true;
     }
 
     public void UpdatePoint(int point)
@@ -62,10 +91,11 @@ public class BlockController : MonoBehaviour
     }
 
     private bool fly = false;
+    private bool canUse = false;
     private Vector3 distance;
     private void FixedUpdate()
     {
-        if (!StaticGameController.Instance.gameIsPlayed) return;
+        if (!StaticGameController.Instance.gameIsPlayed && !canUse) return;
 
         if (!fly && _rb.velocity.y < 0)
         {
