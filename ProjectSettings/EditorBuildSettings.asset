@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/OldScenes/Asure.unity
-    guid: e88531d5aa504794095d0489034a5749
+    path: Assets/Scenes/Asure_Test.unity
+    guid: 6de05932b7253b641aae2219f6a40d79
   m_configObjects: {}
