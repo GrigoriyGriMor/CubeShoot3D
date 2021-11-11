@@ -177,9 +177,11 @@ public class StaticGameController : MonoBehaviour
                 gameEndAnim[i].SetTrigger("Start");
 
         bool win = false;
-        int newPoint = int.Parse(WarriorPointText.text);
-
-        pointValue = (100 - newPoint) * pointMultiplay;
+        int newPoint = int.Parse(PlayerPointText.text);
+        int _value = 50 - newPoint;
+        pointValue = (_value > 0 ? _value : (Mathf.Abs(_value) + 50)) * pointMultiplay;
+        if (pointValue < 0)
+            pointValue = Mathf.Abs(pointValue) + 50;
 
         if (newPoint >= int.Parse(PlayerPointText.text))
             win = true;

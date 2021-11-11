@@ -10,7 +10,7 @@ public class CSPlayerController : MonoBehaviour
     public static CSPlayerController Instance => instance;
 
     [Header("Fire Interface")]
-    [SerializeField] private ShootGunController gun;
+    public ShootGunController gun;
     [SerializeField] private GameObject GunObj;
 
     [Header("AIM")]
@@ -56,15 +56,37 @@ public class CSPlayerController : MonoBehaviour
         }
     }
 
-    public void StartPlayQueue()
+    public void StartPlayQueue(int round)
     {
-        choseNomberPanel.gameObject.SetActive(true);
-        fireObjCount = 0;
-        choseNomberPanel.StartSelection();
-        myMove = true;
-        chosing = true;
-        choseMode = true;
-        fireOpen = false;
+        if (round == 0)
+        {
+            choseNomberPanel.gameObject.SetActive(true);
+            fireObjCount = 0;
+            choseNomberPanel.StartSelection();
+            myMove = true;
+            chosing = true;
+            choseMode = true;
+            fireOpen = false;
+        }
+        else
+        {
+            myMove = true;
+            chosing = false;
+            fireObjCount = 0;
+            LevelController.Instance.InitCastle();
+            FOText.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z + 5);
+            FOText.transform.rotation = Camera.main.transform.rotation;
+            FOText.text = $"+{gun.startFireObjCount}";
+            FOText.GetComponent<Animator>().SetTrigger("Start");
+            StartCoroutine(FireObjCreate(25));
+            StartCoroutine(NextRoundStart());
+        }
+    }
+
+    private IEnumerator NextRoundStart()
+    {
+        yield return new WaitForSeconds(1.5f);
+        canFire = true;
     }
 
     private IEnumerator TimerChoseEnd()
@@ -137,7 +159,7 @@ public class CSPlayerController : MonoBehaviour
 
     private IEnumerator StopNimAnim()
     {
-        StartCoroutine(FireObjCreate());
+        StartCoroutine(FireObjCreate(fireObjCount));
 
         if (cameraAnim != null) cameraAnim.SetTrigger("StartFire");
         if (backgroundAnim != null) backgroundAnim.SetTrigger("Start");
@@ -148,11 +170,11 @@ public class CSPlayerController : MonoBehaviour
     }
 
     private bool upMagazineGun = false;
-    private IEnumerator FireObjCreate()
+    private IEnumerator FireObjCreate(int _count)
     {
         yield return new WaitForSeconds(0.9f);
 
-        int foCount = Mathf.Clamp(fireObjCount, 0, 25);
+        int foCount = Mathf.Clamp(_count, 0, 25);
         upMagazineGun = true;
         for (int i = 0; i < foCount; i++)
         {

@@ -12,9 +12,7 @@ public class CSWarriorController : MonoBehaviour
     [SerializeField] private GameObject GunObj;
 
     [Header("Nomber Chose")]
-   // [SerializeField] private NumericalAggregator choseNomberPanel;
-   // [SerializeField] private Animator cameraAnim;
-    private int fireObjCount = 15;
+    private int fireObjCount = 0;
 
     private CastelController targetCastel;
     private Transform target;
@@ -33,6 +31,7 @@ public class CSWarriorController : MonoBehaviour
 
     private void Awake()
     {
+        fireObjCount = Random.Range(minFireObjValue, maxFireObjValue);
         gun.Init();
         instance = this;
     }
@@ -40,43 +39,32 @@ public class CSWarriorController : MonoBehaviour
     public void StartPlayQueue()
     {
         if (!StaticGameController.Instance.gameIsPlayed) return;
-
-       // choseNomberPanel.gameObject.SetActive(true);
-       // if (cameraAnim != null) cameraAnim.SetTrigger("SelectNomber");
-        fireObjCount = 0;
-        // choseNomberPanel.StartSelection();
-
-        //StartCoroutine(StopSelect());
-
-        StopNumerical(Random.Range(minFireObjValue, maxFireObjValue));
+        StopNumerical();
     }
 
-  /*  private IEnumerator StopSelect()
-    {
-        yield return new WaitForSeconds(1);
-        choseNomberPanel.StopSelection();
-    }*/
-
-    public void StopNumerical(int count)
+    public void StopNumerical()
     {
         fire = true;
-        fireObjCount = count;
-
         StartCoroutine(FireToCastel());
     }
 
     private IEnumerator FireToCastel()
     {
         target = targetCastel.GetFreeTargetBlock();
+
         yield return new WaitForSeconds(1);
 
         GunObj.transform.LookAt(target);
         gun.Fire(fireObjCount, true);
+        fireObjCount = 0;
 
-        while (fire)
+        while (fire && target != null)
         {
             yield return new WaitForSeconds(warriorHardcoreLevel);
             target = targetCastel.GetFreeTargetBlock();
+
+            if (target == null)
+                gun.StopFire();
         }
     }
 
@@ -92,14 +80,14 @@ public class CSWarriorController : MonoBehaviour
     {
         fire = false;
 
-        StartCoroutine(EndGame());
-        //QueueController.Instance.NextQueue(false);
+        //StartCoroutine(EndGame());
+        QueueController.Instance.NextQueue(false);
     }
 
-    private IEnumerator EndGame()
+   /* private IEnumerator EndGame()
     {
         yield return new WaitForSeconds(1);
 
         StaticGameController.Instance.GameEnded();
-    }
+    }*/
 }

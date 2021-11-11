@@ -168,7 +168,7 @@ public class NumericalAggregator : MonoBehaviour
             player.StopNumerical(fireObjCountResult, resultText);
         else
             if (warrior != null)
-            warrior.StopNumerical(fireObjCountResult);
+            warrior.StopNumerical();
 
        // yield return new WaitForSeconds(1);
        // gameObject.SetActive(false);

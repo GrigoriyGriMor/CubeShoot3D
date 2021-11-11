@@ -18,8 +18,11 @@ public class CastelController : MonoBehaviour
 
     [SerializeField] private ParticleSystem startParticle;
 
-    public void Init(bool warCastel)
+    private bool warCastel = false;
+
+    public void Init(bool _warCastel)
     {
+        warCastel = _warCastel;
         // привязываем gameEnd к GameEnded и передаем заданный параметр
         CastelSetting setting = StaticGameController.Instance.SetRefCastel(this, warCastel);
         if (!warCastel) CSWarriorController.Instance.SetTargetCastel(this);
@@ -51,7 +54,7 @@ public class CastelController : MonoBehaviour
         if (anim != null) anim.SetTrigger("Play");
         pointText.text = havePoints.ToString();
 
-        if (havePoints <= 0) gameEnd.Invoke();
+        if (havePoints <= 0 && warCastel) CSPlayerController.Instance.gun.StopFire();
     }
 
     public Transform GetFreeTargetBlock()
@@ -63,7 +66,10 @@ public class CastelController : MonoBehaviour
                 activeBlocks.Add(blocks[i]);
         }
 
-        return activeBlocks[Random.Range(0, activeBlocks.Count)].transform;
+        if (activeBlocks.Count > 0)
+            return activeBlocks[Random.Range(0, activeBlocks.Count)].transform;
+        else
+            return null;
     }
 }
 

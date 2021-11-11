@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ShootGunController : MonoBehaviour
 {
-    [SerializeField] private int startFireObjCount = 20;
+    public int startFireObjCount = 20;
     [SerializeField] private TMPro.TextMeshProUGUI fireObjText; 
 
     [SerializeField] private Transform gunPos;
@@ -60,13 +60,19 @@ public class ShootGunController : MonoBehaviour
       //  gunAnim.SetTrigger("Fireplus");
     }
 
+    private bool stopFire = false;
+    public void StopFire()
+    {
+        stopFire = true;
+    }
+
     private IEnumerator FireOpen()
     {
         if (fireOpen) yield break;
 
         fireOpen = true;
 
-        while (gunMagazineCount > 0)
+        while (gunMagazineCount > 0 && !stopFire)
         {
             gunMagazineCount -= 1;
             if (fireObjText != null) fireObjText.text = $"x{gunMagazineCount}";
@@ -112,5 +118,8 @@ public class ShootGunController : MonoBehaviour
             CSPlayerController.Instance.FireEnd();
         else
             CSWarriorController.Instance.FireEnd();
+
+        gunMagazineCount = 1;
+        stopFire = false;
     }
 }

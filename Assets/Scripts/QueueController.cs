@@ -7,8 +7,12 @@ public class QueueController : MonoBehaviour
     private static QueueController instance;
     public static QueueController Instance => instance;
 
-    [Header("Кто стреляет первым")]
-    [SerializeField] private bool warriorFireFirst = false;
+    [Header("Триггер в аним: Start")]
+    //[SerializeField] private bool warriorFireFirst = false;
+
+    [SerializeField] private Animator[] castleUIAnim = new Animator[3];
+
+    private int roundNumber = -1;
 
     private void Awake()
     {
@@ -17,7 +21,8 @@ public class QueueController : MonoBehaviour
 
     public void Start()
     {
-        NextQueue(warriorFireFirst);
+        roundNumber = -1;
+        NextQueue(false);
     }
 
     public void NextQueue(bool playerEndedFire)
@@ -25,6 +30,16 @@ public class QueueController : MonoBehaviour
         if (playerEndedFire)
             CSWarriorController.Instance.StartPlayQueue();
         else
-            CSPlayerController.Instance.StartPlayQueue();
+        {
+            if (roundNumber >= 0 && castleUIAnim[roundNumber] != null)
+                castleUIAnim[roundNumber].SetTrigger("Start");
+
+            roundNumber = roundNumber + 1;
+
+            if (roundNumber > 2)
+                StaticGameController.Instance.GameEnded();
+            else
+                CSPlayerController.Instance.StartPlayQueue(roundNumber);
+        }
     }
 }
