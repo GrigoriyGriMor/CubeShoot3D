@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5690709, g: 0.7844005, b: 0.90323097, a: 1}
+  m_IndirectSpecularColor: {r: 0.5698695, g: 0.78426987, b: 0.90258485, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3636,15 +3636,6 @@ MonoBehaviour:
   - {fileID: 4824470974729928895, guid: d393a3e61fef8dd4c8e7a4fb30b3b164, type: 3}
   castelsObj:
   - {fileID: 1012079888757675068, guid: 378bfa0f40aa671449f14d7cbc49e4e7, type: 3}
-  - {fileID: 1012079888757675068, guid: fd2adf0cc9625f0459fbacd1e0178ab4, type: 3}
-  - {fileID: 1012079888757675068, guid: f17f31912722a73428f60d361c61c4bc, type: 3}
-  - {fileID: 1012079888757675068, guid: c7689b6078daf0542a70f85c087430ce, type: 3}
-  - {fileID: 1012079888757675068, guid: 5af97b0b29539b0419edd33881f0820f, type: 3}
-  - {fileID: 1012079888757675068, guid: 8f9f582e2afd5e046b61bede925ae509, type: 3}
-  - {fileID: 1012079888757675068, guid: 456c2f2081e1f294f9eee01438f8b598, type: 3}
-  - {fileID: 1012079888757675068, guid: cc490f6cae8e98045bf1803b63b3ae70, type: 3}
-  - {fileID: 1012079888757675068, guid: 080d0857f5617fb48a88bba54899b26d, type: 3}
-  - {fileID: 1012079888757675068, guid: e6e854fc383b37f43a6737f38ca9568d, type: 3}
 --- !u!4 &741510379
 Transform:
   m_ObjectHideFlags: 0
