@@ -74,14 +74,30 @@ public class CSPlayerController : MonoBehaviour
             myMove = true;
             chosing = false;
             fireObjCount = 0;
-            LevelController.Instance.InitCastle();
-            FOText.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 1, Camera.main.transform.position.z + 10);
+
+            StartCoroutine(NextRoundSettingSet());
+          /*  FOText.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 1, Camera.main.transform.position.z + 10);
             FOText.transform.rotation = Camera.main.transform.rotation;
             FOText.text = $"+{gun.startFireObjCount}";
             FOText.GetComponent<Animator>().SetTrigger("Start");
             StartCoroutine(FireObjCreate(25));
-            StartCoroutine(NextRoundStart());
+            gun.SetFireObjText(0);
+            StartCoroutine(NextRoundStart());*/
         }
+    }
+
+    private IEnumerator NextRoundSettingSet()
+    {
+        yield return new WaitForSeconds(1.5f);
+
+        LevelController.Instance.InitCastle();
+        FOText.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 1, Camera.main.transform.position.z + 10);
+        FOText.transform.rotation = Camera.main.transform.rotation;
+        FOText.text = $"+{gun.startFireObjCount}";
+        FOText.GetComponent<Animator>().SetTrigger("Start");
+        StartCoroutine(FireObjCreate(25));
+        gun.SetFireObjText(fireObjCount);
+        StartCoroutine(NextRoundStart());
     }
 
     private IEnumerator NextRoundStart()
@@ -132,6 +148,7 @@ public class CSPlayerController : MonoBehaviour
             //если стреляем
             if (!fireOpen && canFire)
             {
+                canFire = false;
                 DragScreenAnim.SetTrigger("Start");
 
                 fireOpen = true;

@@ -37,16 +37,19 @@ public class ShootGunController : MonoBehaviour
         }
     }
 
+    private int bonuseFireObj = 0;
     public void SetFireObjText(int count)
     {
-        if (fireObjText != null) fireObjText.text = $"x{startFireObjCount + count}";
+        bonuseFireObj += count;
+
+        if (fireObjText != null) fireObjText.text = $"x{startFireObjCount + bonuseFireObj}";
     }
 
     private bool warrior;
     public void Fire(int fireObj, bool _warriorFire)
     {
         warrior = _warriorFire;
-        gunMagazineCount = startFireObjCount + fireObj;
+        gunMagazineCount = startFireObjCount + bonuseFireObj;
         if (fireObjText != null) fireObjText.text = $"x{gunMagazineCount}";
         StartCoroutine(FireOpen());
     }
@@ -63,6 +66,8 @@ public class ShootGunController : MonoBehaviour
     private bool stopFire = false;
     public void StopFire()
     {
+        if (gunMagazineCount <= 0) return;
+
         stopFire = true;
     }
 
@@ -72,8 +77,17 @@ public class ShootGunController : MonoBehaviour
 
         fireOpen = true;
 
+        bool bonusFO = false;
+        int boardFOCount = gunMagazineCount - startFireObjCount;
+
         while (gunMagazineCount > 0 && !stopFire)
         {
+            if (gunMagazineCount <= boardFOCount)
+            {
+                bonuseFireObj -= 1;
+                bonusFO = true;
+            } 
+
             gunMagazineCount -= 1;
             if (fireObjText != null) fireObjText.text = $"x{gunMagazineCount}";
             gunAnim.SetTrigger("Fire");
@@ -90,7 +104,7 @@ public class ShootGunController : MonoBehaviour
                 {
                     objPool[i].SetActive(true);
 
-                    if (fireTarget != null) objPool[i].GetComponent<PLFireObjController>().Init(fireTarget.position);
+                    if (fireTarget != null) objPool[i].GetComponent<PLFireObjController>().Init(fireTarget.position, bonusFO);
                     objPool[i].transform.position = gunPos.position;
                     objPool[i].transform.rotation = gunPos.rotation;
                     break;
@@ -102,7 +116,7 @@ public class ShootGunController : MonoBehaviour
                     yield return new WaitForFixedUpdate();
                     objPool[0].SetActive(true);
 
-                    if (fireTarget != null) objPool[i].GetComponent<PLFireObjController>().Init(fireTarget.position);
+                    if (fireTarget != null) objPool[i].GetComponent<PLFireObjController>().Init(fireTarget.position, bonusFO);
                     objPool[0].transform.position = gunPos.position;
                     objPool[0].transform.rotation = gunPos.rotation;
                     break;
@@ -119,7 +133,6 @@ public class ShootGunController : MonoBehaviour
         else
             CSWarriorController.Instance.FireEnd();
 
-        gunMagazineCount = 1;
         stopFire = false;
     }
 }

@@ -10,10 +10,22 @@ public class PLFireObjController : MonoBehaviour
     [SerializeField] private GameObject destroyObjPrefab;
     [SerializeField] private float destroyTime = 5;
 
+    private Material defaultMat;
+    [Header("Материал бонусных снарядов")]
+    [SerializeField] private Material bonusFireObjMat;
+    [SerializeField] private MeshRenderer Visual;
+
     private Vector3 targetPos;
 
-    public void Init(Vector3 _targetPos)
+    private void Start()
     {
+        defaultMat = Visual.material;
+    }
+
+    public void Init(Vector3 _targetPos, bool bonusFO)
+    {
+        if (bonusFO) Visual.material = bonusFireObjMat;
+
         targetPos = _targetPos;
         parableFackHight = 0;
         StopCoroutine(OpenFire());
@@ -41,6 +53,7 @@ public class PLFireObjController : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
+        Visual.material = defaultMat;
         gameObject.SetActive(false);
         if (destroyObjPrefab != null)
         {
@@ -54,6 +67,7 @@ public class PLFireObjController : MonoBehaviour
     private IEnumerator DestroyTime()
     {
         yield return new WaitForSeconds(destroyTime);
+        Visual.material = defaultMat;
         gameObject.SetActive(false);
     }
 
@@ -72,6 +86,7 @@ public class PLFireObjController : MonoBehaviour
             }
 
             StopCoroutine(OpenFire());
+            Visual.material = defaultMat;
             gameObject.SetActive(false);
         }
         else
@@ -86,6 +101,7 @@ public class PLFireObjController : MonoBehaviour
             }
 
             StopCoroutine(OpenFire());
+            Visual.material = defaultMat;
             gameObject.SetActive(false);
         }
     }
@@ -95,6 +111,7 @@ public class PLFireObjController : MonoBehaviour
         if (gameObject.transform.position.y < -5)
         {
             StopCoroutine(OpenFire());
+            Visual.material = defaultMat;
             gameObject.SetActive(false);
         }
     }

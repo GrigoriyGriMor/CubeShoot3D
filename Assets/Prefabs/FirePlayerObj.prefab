@@ -92,7 +92,7 @@ Halo:
   m_Enabled: 1
   m_Color:
     serializedVersion: 2
-    rgba: 4280045186
+    rgba: 4278236159
   m_Size: 0.15
 --- !u!1 &9025821459424602280
 GameObject:
@@ -157,6 +157,8 @@ MonoBehaviour:
   parableHight: 3
   destroyObjPrefab: {fileID: 6102812737268295557, guid: e320a76ed6dfe1145b714b1d97d28c3c, type: 3}
   destroyTime: 1.5
+  bonusFireObjMat: {fileID: 2100000, guid: 9fcaeb7e1b6eddb4994d73e8560a9fd6, type: 2}
+  Visual: {fileID: 7332191974561798286}
 --- !u!95 &452200056811488219
 Animator:
   serializedVersion: 3

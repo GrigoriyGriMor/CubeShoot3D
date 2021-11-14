@@ -48,14 +48,26 @@ public class CastelController : MonoBehaviour
 
     public void PointsControlls()
     {
+        //if (havePoints <= 0) return;
+
         havePoints = 0;
         for (int i = 0; i < blocks.Count; i++)
             havePoints += blocks[i].healPoint;
 
-        if (anim != null) anim.SetTrigger("Play");
-        pointText.text = havePoints.ToString();
+        //if (anim != null) anim.SetTrigger("Play");
+       // pointText.text = havePoints.ToString();
 
-        if (havePoints <= 0 && warCastel) CSPlayerController.Instance.gun.StopFire();
+        if (havePoints <= 0 && warCastel)
+        {
+            CSPlayerController.Instance.gun.StopFire();
+            havePoints = 1;
+        }
+    }
+
+    public void UpPointInController(int point = 1)
+    {
+        if (anim != null) anim.SetTrigger("Play");
+        pointText.text = (int.Parse(pointText.text) + point).ToString();
     }
 
     public Transform GetFreeTargetBlock()

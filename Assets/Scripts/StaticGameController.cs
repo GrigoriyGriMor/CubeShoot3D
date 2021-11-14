@@ -177,13 +177,12 @@ public class StaticGameController : MonoBehaviour
                 gameEndAnim[i].SetTrigger("Start");
 
         bool win = false;
-        int newPoint = int.Parse(PlayerPointText.text);
-        int _value = 50 - newPoint;
-        pointValue = (_value > 0 ? _value : (Mathf.Abs(_value) + 50)) * pointMultiplay;
-        if (pointValue < 0)
-            pointValue = Mathf.Abs(pointValue) + 50;
+        int playerPoint = int.Parse(PlayerPointText.text);
+        int warriorPoint = int.Parse(WarriorPointText.text);
 
-        if (newPoint >= int.Parse(PlayerPointText.text))
+        pointValue = warriorPoint * pointMultiplay;
+
+        if (warriorPoint >= playerPoint)
             win = true;
         else
             win = false;
@@ -197,7 +196,7 @@ public class StaticGameController : MonoBehaviour
             for (int i = 0; i < GamePlayedPanels.Length; i++)
                 GamePlayedPanels[i].SetActive(false);
             winGamePanel.SetActive(true);
-            if (int.Parse(PlayerPointText.text) <= 0)
+            if (int.Parse(WarriorPointText.text) >= 35)
             {
                 winBestShooter.SetActive(true);
                 winGoodWork.SetActive(false);
@@ -222,19 +221,17 @@ public class StaticGameController : MonoBehaviour
 
     public CastelSetting SetRefCastel(CastelController castel, bool win)
     {
-        //castel.gameEnd.AddListener(() => GameEnded());
-
         CastelSetting setting = new CastelSetting();
         if (win)
         {
             CSPlayerController.Instance.FirstTargetPos(castel.gameObject.transform.position);
-            setting.Text = PlayerPointText;
-            setting.anim = PlayerPointText.GetComponent<Animator>();
+            setting.Text = WarriorPointText;
+            setting.anim = WarriorPointText.GetComponent<Animator>();
         }
         else
         {
-            setting.Text = WarriorPointText;
-            setting.anim = WarriorPointText.GetComponent<Animator>();
+            setting.Text = PlayerPointText;
+            setting.anim = PlayerPointText.GetComponent<Animator>();
         }
 
         return setting;

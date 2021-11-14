@@ -37,9 +37,16 @@ public class QueueController : MonoBehaviour
             roundNumber = roundNumber + 1;
 
             if (roundNumber > 2)
-                StaticGameController.Instance.GameEnded();
+                StartCoroutine(EndGame());
             else
                 CSPlayerController.Instance.StartPlayQueue(roundNumber);
         }
+    }
+
+    private IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(1);
+
+        StaticGameController.Instance.GameEnded();
     }
 }

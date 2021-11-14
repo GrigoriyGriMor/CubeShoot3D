@@ -79,10 +79,7 @@ public class BlockController : MonoBehaviour
                     go.transform.GetChild(i).GetComponent<MeshRenderer>().material = material.material;
 
             gameObject.SetActive(false);
-            /*material.gameObject.SetActive(false);
-            gameObject.GetComponent<Collider>().enabled = false;
-            text.text = "";*/
-
+            castel.UpPointInController(1);
             return;
         }
 
