@@ -34,6 +34,7 @@ public class CSPlayerController : MonoBehaviour
     [SerializeField] private GameObject fireUIPanel;
     [SerializeField] private Text timerText;
     [SerializeField] private Animator timerAnim;
+    [SerializeField] private Animator DragScreenAnim;
 
     private bool myMove = false;
     private bool chosing = false;
@@ -131,6 +132,8 @@ public class CSPlayerController : MonoBehaviour
             //если стреляем
             if (!fireOpen && canFire)
             {
+                DragScreenAnim.SetTrigger("Start");
+
                 fireOpen = true;
                 aimVisual.gameObject.SetActive(true);
 
