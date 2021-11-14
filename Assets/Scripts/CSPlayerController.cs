@@ -74,7 +74,7 @@ public class CSPlayerController : MonoBehaviour
             chosing = false;
             fireObjCount = 0;
             LevelController.Instance.InitCastle();
-            FOText.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z + 5);
+            FOText.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y + 1, Camera.main.transform.position.z + 10);
             FOText.transform.rotation = Camera.main.transform.rotation;
             FOText.text = $"+{gun.startFireObjCount}";
             FOText.GetComponent<Animator>().SetTrigger("Start");

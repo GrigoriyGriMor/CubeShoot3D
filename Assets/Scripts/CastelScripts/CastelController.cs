@@ -36,7 +36,8 @@ public class CastelController : MonoBehaviour
 
         PointsControlls();
 
-        StartCoroutine(StartParticle());
+        if (warCastel)
+            StartCoroutine(StartParticle());
     }
 
     private IEnumerator StartParticle()
