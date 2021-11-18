@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0028)https://skr.sh/sB2vMaiamGY?a -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/gkaaffkabfmjaekemimgnajfboopmpom">
+
+<link rel="stylesheet" type="text/css" href="./Скриншот 15-11-2021 22_43_42.jpg_files/vk001.css"><link rel="stylesheet" type="text/css" href="./Скриншот 15-11-2021 22_43_42.jpg_files/skrinshoter.css">
+<link rel="shortcut icon" href="https://skr.sh/assets/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://skr.sh/assets/favicon.ico" type="image/x-icon">
+
+<meta name="robots" content="noindex,nofollow">
+
+<script type="text/javascript" src="./Скриншот 15-11-2021 22_43_42.jpg_files/context.js.Без названия" async=""></script><script async="" src="./Скриншот 15-11-2021 22_43_42.jpg_files/analytics.js.Без названия"></script><script type="text/javascript" src="./Скриншот 15-11-2021 22_43_42.jpg_files/jquery-1.11.3.min.js.Без названия"></script>
+
+<script src="./Скриншот 15-11-2021 22_43_42.jpg_files/playerjs-1.js.Без названия" type="text/javascript"></script><meta property="og:title" content="Скриншот 15-11-2021 22:43:42.jpg"><meta property="og:description" content="Снято с помощью Скриншотер.рф"><meta property="og:image" content="https://skr.sh/i/151121/vMaiamGY.jpg?download=1&amp;name=Скриншот 15-11-2021 22:43:42.jpg"><meta property="og:site_name" content="skrinshoter.ru">
+    
+
+<link rel="stylesheet" href="./Скриншот 15-11-2021 22_43_42.jpg_files/main.css"><title>Скриншот 15-11-2021 22:43:42.jpg</title><script>
+
+$( document ).ready(function() {
+  AdjustImgSize($("#screenshot-image").get()[0]);
+});
+
+
+
+var rtime;
+var timeout = false;
+var delta = 200;
+$(window).resize(function() {
+    console.log("resize");
+    rtime = new Date();
+    if (timeout === false) {
+        timeout = true;
+        setTimeout(resizeend, delta);
+    }
+});
+
+function resizeend() {
+    if (new Date() - rtime < delta) {
+        setTimeout(resizeend, delta);
+    } else {
+        timeout = false;
+        AdjustImgSize($("#screenshot-image").get()[0]);
+      }                 
+}
+
+function AdjustImgSize(obj)
+{
+	if (obj == undefined)
+		return;
+  var imageScaled = false;
+    if ($(obj).prop("naturalWidth") === 0)
+    {
+      setTimeout(function () { AdjustImgSize(obj) }, 50);
+      return;
+    }
+
+    var MaxH = ($(window).height()*65)/100;
+
+    if ($(window).width() < $(obj).prop("naturalWidth") )
+    {
+      //Get 80% of the window to img     
+      $(obj.parentNode).css("max-width", (($(window).width()*80)/100) + 'px');
+      $(obj).css("max-width", (($(window).width()*80)/100) + 'px');
+
+      imageScaled = true;
+    }  
+
+    if (MaxH < $(obj).prop("naturalHeight"))
+    {
+      $(obj).css("max-height", MaxH + 'px');
+
+      imageScaled = true;
+    }
+
+    if (imageScaled)
+    {
+      obj.className = 'can_zoom';
+    }
+    else
+    {
+      obj.className = 'cannot_zoom'; 
+      //obj.parentNode.className = 'img_container';
+      $(obj.parentNode).css("max-width",   $(window).width() + "px");
+      $(obj).css("max-width",   $("#screenshot-image").prop("naturalWidth") + "px");
+      $(obj).css("max-height",  $("#screenshot-image").prop("naturalHeight") + "px");
+    }
+}
+
+function IAmChrome()
+{
+  var isChromium = window.chrome,
+      vendorName = window.navigator.vendor,
+      isOpera = window.navigator.userAgent.indexOf("OPR") > -1,
+      isIEedge = window.navigator.userAgent.indexOf("Edge") > -1;
+  if(isChromium !== null && isChromium !== undefined && vendorName === "Google Inc." && isOpera == false && isIEedge == false) {
+     return true;
+  } else { 
+     return false;
+  }
+}
+
+function imgZoom(obj) {
+  if (obj.className == 'can_zoom') {
+    $(obj).css("max-height", "");
+    obj.className = 'can_zoom_out';
+    obj.parentNode.className = 'img_container_full';
+
+    $(obj).css("max-width",   $("#screenshot-image").prop("naturalWidth") + "px");
+    $(obj).css("max-height",  $("#screenshot-image").prop("naturalHeight") + "px");
+
+    $(".screenshot-footer").css("display", "none");
+
+  } else {
+    obj.className = 'can_zoom';
+    obj.parentNode.className = 'img_container';
+    //alert("" + $(window).width() + " " + $(obj).prop("naturalWidth"));
+    AdjustImgSize(obj);
+    window.scroll(0, 0);
+    $(".screenshot-footer").css("display", "block");
+  }
+}
+function onload() {
+  var iframe = document.getElementById('iframe');
+  if (iframe) {
+    if(window.innerWidth) {
+      var h = window.innerHeight;
+    } else {
+      var h = document.body.clientHeight;
+    }
+    iframe.style.height = (h - 45 - 2) +'px';
+  }
+
+  var scrImg = document.getElementById('screenshot-image');
+  var chromeInstBut = document.getElementById('chrome-ext-install-button');
+  var extensionInstalled = document.getElementById('extension-is-installed');
+  var hostName = "skr.sh";
+  var fullUrl = "/sB2vMaiamGY?a";
+
+  if (IAmChrome() && !extensionInstalled && hostName.indexOf("skrinshoter.ru") > -1 && !(fullUrl.indexOf("?") > -1))
+  {      
+    //scrImg.style.display = "none";
+    //chromeInstBut.style.display = "block";
+  }
+
+  if (navigator.userAgent.indexOf("YaBrowser") > 0) {
+    var app = document.getElementById('yandex-app');
+    app.style.display = "inline-block";    
+  } 
+  else if (navigator.userAgent.indexOf("OPR") > 0) {
+    var app = document.getElementById('opera-app');
+    app.style.display = "inline-block";    
+  } 
+  else if (IAmChrome())
+  {      
+    var app = document.getElementById('chrome-app');
+    app.style.display = "inline-block";
+  }
+
+  var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+
+  if (isMac) {
+    var app = document.getElementById('windows-app');
+    app.style.display = "none";    
+  }
+
+}
+
+function installOk() {
+  var scrImg = document.getElementById('screenshot-image');
+  var chromeInstBut = document.getElementById('chrome-ext-install-button');
+  scrImg.style.display = "block";
+  chromeInstBut.style.display = "none";
+}
+
+function installFailed() {
+  installOk();
+}
+
+</script>
+<script charset="utf-8" src="./Скриншот 15-11-2021 22_43_42.jpg_files/22825c03f8d8ead9b92b.js.Без названия" crossorigin="anonymous" importance="high"></script><script charset="utf-8" src="./Скриншот 15-11-2021 22_43_42.jpg_files/1aa9ff101c26202e51e3.js.Без названия" crossorigin="anonymous" importance="high"></script><script async="" crossorigin="anonymous" src="./Скриншот 15-11-2021 22_43_42.jpg_files/host.js.Без названия"></script><link rel="preconnect" href="https://yastatic.net/"><link rel="preconnect" href="https://avatars.mds.yandex.net/"><link rel="preconnect" href="https://mc.yandex.ru/"><meta id="https://yastatic.net/partner-code-bundles/48699/context_static.js"><link rel="preconnect" href="https://ads.adfox.ru/"><script charset="utf-8" src="./Скриншот 15-11-2021 22_43_42.jpg_files/74f0657cf6f01edfe064.js.Без названия" crossorigin="anonymous" importance="high"></script><style type="text/css">.resize-observer[data-v-8859cc6c]{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border:none;background-color:transparent;pointer-events:none;display:block;overflow:hidden;opacity:0}.resize-observer[data-v-8859cc6c] object{display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1}</style><script async="" crossorigin="anonymous" src="./Скриншот 15-11-2021 22_43_42.jpg_files/watch.js.Без названия"></script><style nonce="">#6733dc83db{width:1px;height:1px;position:relative;}</style><style nonce="">#id8444{width:1px;height:1px;top:0px;left:0px;position:absolute;}</style></head>
+<body onload="onload();">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17620704-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<noindex>
+<div class="docs_panel_wrap">
+  <div class="docs_panel docs_panel_mobile">
+	<a href="http://xn--e1affnfjebo2d.xn--p1ai/" target="_self" style="margin-top:8px;">
+		<img alt="" style="object-fit: contain;content:url(&#39;/assets/images/logo.svg&#39;);height:50px;">
+    </a>
+  </div>
+
+  <div class="docs_panel">
+    <div style="padding: 5px 20px;">
+      <!--<button class="flat_button fl_r" onclick="return saveDoc();">Сохранить документ на диск</button>-->
+
+      <a href="./Скриншот 15-11-2021 22_43_42.jpg_files/vMaiamGY.jpg" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Screenshot&#39;, &#39;Download&#39;);return true;" class="save_button fl_r" style="margin-top:11px;" download="Скриншот 15-11-2021 22:43:42.jpg">Сохранить файл на диск</a><div class="fl_r" style="padding: 6px 10px 0px; color: #888888;"></div><a style="style=&quot;padding-top:" 5px;="" display:="" block;"="" href="http://xn--e1affnfjebo2d.xn--p1ai/" target="_self" id="WPhte-iuplink" class="s1link fl_l">
+            <div id="WPhte-iupimg" style="position: relative;" class="s1img">
+                <img alt="" style="object-fit: contain;" id="WPhte-iupimgimage" class="s1imgimage" src="./Скриншот 15-11-2021 22_43_42.jpg_files/logo.svg">
+            </div>
+        </a>   
+    &nbsp;
+          </div>
+  </div>
+</div>
+<div id="container-main" style="padding:16px;">
+<!-- Yandex.RTB R-A-502366-1 -->
+				<div id="yandex_rtb_R-A-502366-1"><div></div></div>
+				<script type="text/javascript">
+					(function(w, d, n, s, t) {
+						w[n] = w[n] || [];
+						w[n].push(function() {
+							Ya.Context.AdvManager.render({
+								blockId: "R-A-502366-1",
+								renderTo: "yandex_rtb_R-A-502366-1",
+								async: true
+							});
+						});
+						t = d.getElementsByTagName("script")[0];
+						s = d.createElement("script");
+						s.type = "text/javascript";
+						s.src = "//an.yandex.ru/system/context.js";
+						s.async = true;
+						t.parentNode.insertBefore(s, t);
+					})(this, this.document, "yandexContextAsyncCallbacks");
+				</script>
+
+
+
+<div class="content-box">
+			  <div id="img-container" class="img_container_full">
+			  <img id="screenshot-image" src="./Скриншот 15-11-2021 22_43_42.jpg_files/vMaiamGY.jpg" class="can_zoom_out" onclick="imgZoom(this);" style="border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.61) -1px 2px 25px -1px; max-width: 800px; max-height: 573px; pointer-events: none;">
+			  <a id="chrome-ext-install-button" class="save_button" onclick="
+			  chrome.webstore.install(&#39;https://chrome.google.com/webstore/detail/gkaaffkabfmjaekemimgnajfboopmpom&#39;, function () {installOk();}, function (msg) {installFailed();});" style="margin-top:100px;padding-top:18px;padding-bottom:18px;font-size:24px;display:none;">Показать скриншот</a>
+			  </div>
+			
+</div>
+
+</div>
+
+
+
+</noindex><div class="ap-ext ap-ext-1688"><div class="ap-base ap-base--ltr ap-theme--dark"><!----> <!----> <!----> <div><!----> <div class="ap-sbi"><!----> <!----> <!----> <div class="ap-sbi-aside"><!----> <div class="ap-sbi-aside-btn-minimize" style="display: none;"><img src="https://skr.sh/sB2vMaiamGY?a" class="ap-sbi-img-thumb"> <i class="ap-sbi-aside-btn-minimize__icon ap-icon-chevron-right"></i></div> <!----></div></div> <div class="ap-ACT-wrapper"><div class="ap-ACT__inner"><div class="ap-ACT-compared-list-wrapper"><div class="ap-ACT-next ap-ACT-next__prev ap-icon-chevron-left ap-is-disabled"></div> <div class="ap-ACT-compared-list-container"><div class="ap-ACT-compared-list" style="width: 1000%; height: 100%; transform: translate3d(0px, 0px, 0px);"></div> <!----></div> <div class="ap-ACT-next ap-ACT-next__next ap-icon-chevron-right ap-is-disabled"></div></div> <div class="ap-ACT-ctrls ap-ACT-ctrls__compare ap-is-disabled">
+      Сравнить (0/20)
+    </div> <div class="ap-ACT-ctrls ap-ACT-ctrls__contact ap-is-disabled">Связаться с нами</div> <div class="ap-ACT-ctrls ap-ACT-ctrls__clear ap-is-disabled">Очистить все</div> <div title="Закрыть" class="ap-ACT-ctrls ap-ACT-ctrls__close ap-icon-close"></div></div></div> </div> <div class="ap-acc-tooltip" style="position: fixed; top: 0px; left: 0px; display: none;">
+  
+</div> <div></div> <!----> <!----> <div></div> <!----> <!----></div></div><div style="position: fixed; left: -99px;"><div id="6733dc83db"><iframe frameborder="no" scrolling="no" allowtransparency="true" hidefocus="true" tabindex="-1" marginwidth="0" marginheight="0" src="./Скриншот 15-11-2021 22_43_42.jpg_files/render.html" id="id8444" style="opacity: 1;"></iframe></div></div></body></html>
